@@ -1,0 +1,2 @@
+def RNAP(st):
+    while
