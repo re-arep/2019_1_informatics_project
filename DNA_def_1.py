@@ -1,13 +1,14 @@
 import random as rd
 
 
-def DNA():
+def DNA(length):
 
     neclt = ["A", "T", "G", "C"]
     dnau = str()
     dnad = str()
+    length = length
 
-    for i in range(100):
+    for i in range(length):
         dnau += rd.choice(neclt)
 
     for j in range(len(dnau)):
@@ -23,6 +24,8 @@ def DNA():
     return dnau, dnad
 
 
+'''
 dna = DNA()
-print(dna[0])
-print(dna[1])
+print("3'-> " + dna[0] + " ->5'")
+print("5'<- " + dna[1] + " <-3'")
+'''
