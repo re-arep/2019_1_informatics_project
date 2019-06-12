@@ -22,12 +22,10 @@ while True:
 
 
 '''
-#mode = rd.randint(0, 1)
+mode = rd.randint(0, 1)
 tgcode = "ATG"
 ficode = "GTC"
-#dna = dna1.DNA(dna_length)
-mode = 0
-dna = ["ATGGTAATGGTAGTCCTGGTCCTG", "TACCATTACCATCAGGACCAGGAC"]
+dna = dna1.DNA(dna_length)
 rna = rnap2.RNAP(dna, mode, tgcode, ficode)
 rrna = rna.transcription()
 
@@ -35,4 +33,3 @@ rrna = rna.transcription()
 print("3'-> " + dna[0] + " ->5'")
 print("5'<- " + dna[1] + " <-3'")
 print(rrna)
-print(rna.find_fi_code())

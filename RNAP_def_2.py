@@ -22,7 +22,7 @@ class RNAP:
 
     def find_fi_code(self):
         if self.fi_code in self.dna[self.find_in_code():]:
-            return self.dna.index(self.fi_code)+self.find_in_code()
+            return self.dna.index(self.fi_code)
         else:
             return False
 
@@ -31,7 +31,7 @@ class RNAP:
         ffc = self.find_fi_code()
         direct = ["3'", "5'"]
         if fic != False and ffc != False:
-            for i in range(fic, ffc):
+            for i in range(fic, ffc+len(self.fi_code)):
                 if self.dna[i] == "A":
                     self.rna += "U"
                 elif self.dna[i] == "T":
