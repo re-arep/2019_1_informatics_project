@@ -1,5 +1,5 @@
-GlowScript 2.7 VPython
-    
+from vpython import*
+
 import random as rd
 
 
@@ -24,7 +24,6 @@ def DNA(length):
             dnad += "G"
 
     return dnau, dnad
-
 
 
 #A is red, G is blue, C is yellow, T is green, U is purple, DNA is Box
@@ -136,4 +135,3 @@ for k in rnad:
         Urcopy = Ur.clone(pos = p4)
         Urcopy.visible = True
     p4.x += 1
-
