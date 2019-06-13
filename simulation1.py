@@ -20,7 +20,6 @@ if inp == 'y':
             rrnaf = rrna[3]
             print(dna[0], "\n", dna[1])
             print(rrna[2], rrna[3], rrna[4])
-            print(rrna[1])
             print(rrna[0])
 
             #A is red, G is blue, C is yellow, T is green, U is purple, DNA is Box
@@ -85,12 +84,12 @@ if inp == 'y':
 
             ds = 4
             num = ds #starting point
-            ps = int(rrna[1])
-
+            ps = int(rna.find_in_code())
+            print(ps)
             if mode == 0:
-                p3 = vec(ps, -4, 0)
-            else:
                 p3 = vec(ps, -2, 0)
+            else:
+                p3 = vec(ps, -4, 0)
 
             #RNA generator
             for k in rrnaf:
