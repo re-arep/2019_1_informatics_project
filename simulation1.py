@@ -14,13 +14,9 @@ if inp == 'y':
         dna = dna1.DNA(dna_length)
         rna = rnap3.RNAP(dna, mode, tgcode, ficode)
         rrna = rna.transcription()
-        print(rrna)
 
         if rrna != False:
             rrnaf = rrna[3]
-            print(dna[0], "\n", dna[1])
-            print(rrna[2], rrna[3], rrna[4])
-            print(rrna[0])
 
             #A is red, G is blue, C is yellow, T is green, U is purple, DNA is Box
             A = box(pos=vector(0, 0, 0), length = 1, height = 1, width = 1, color = color.red)
@@ -85,7 +81,6 @@ if inp == 'y':
             ds = 4
             num = ds #starting point
             ps = int(rna.find_in_code())
-            print(ps)
             if mode == 0:
                 p3 = vec(ps, -2, 0)
             else:
