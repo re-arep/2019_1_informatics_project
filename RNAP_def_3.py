@@ -31,15 +31,9 @@ class RNAP:
         ffc = self.find_fi_code()
         direct = ["3'", "5'"]
         if (fic is not False) and (ffc is not False):
-            for i in range(fic, ffc+len(self.fi_code)):
-                if self.dna[i] == "A":
-                    self.rna += "U"
-                elif self.dna[i] == "T":
-                    self.rna += "A"
-                elif self.dna[i] == "G":
-                    self.rna += "C"
-                else:
-                    self.rna += "G"
+            com = {'A': 'T', 'T': 'A', 'G':'C', 'C':'G'}
+            complement = lambda x : com[x]
+            self.rna += ''.join(list(map(complement, self.dna[fic: ffc+len(self.fi_code)])))
             if self.dna_mode == 0:
                 reversed(self.rna)
             else:
